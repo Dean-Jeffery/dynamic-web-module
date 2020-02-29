@@ -1,8 +1,15 @@
 body {
-  background: #45A29;
+  background: #46A29F;
   font-family: 'Open Sans', sans-serif;
   font-size: 10pt;
-  color: #707070;
+}
+
+h2{
+  color: #1F2833;
+}
+
+h3{
+  color: #66fcf1;
 }
 
 p {
@@ -10,23 +17,7 @@ p {
 }
 
 a {
-  color: #FEE722;
-}
-
-img.alignleft {
-  float: left;
-}
-
-img.alignright {
-  float: right;
-}
-
-img.aligncenter {
-  margin: 0px auto;
-}
-
-hr {
-  display: none;
+  color: #45a29e;
 }
 
 /** WRAPPER */
@@ -36,7 +27,7 @@ hr {
 
 .container {
   width: 1200px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .clearfix {
@@ -168,19 +159,6 @@ hr {
   margin-bottom: 30px;
 }
 
-.more {
-  display: block;
-  float: left;
-  width: 88px;
-  padding: 5px 5px;
-  margin-right: 10px;
-  background: #222222;
-  border-radius: 8px;
-  color: #FFFFFF !important;
-  text-align: center;
-  text-decoration: none;
-}
-
 .comments {
   display: block;
   float: left;
@@ -193,11 +171,23 @@ hr {
   text-decoration: none;
 }
 
+/* LOGIN FORM */
+
+.login-form {
+    /* Size and position */
+    padding: 15px;
+    position: relative;
+    /* Styles */
+    background-color: #fff;
+    border: 1px solid #E7EBED;
+    border-radius: 8px;
+    color: #000;
+    margin-bottom: 40px;
+}
 /** SIDEBAR */
 #sidebar {
   float: right;
   width: 350px;
-  padding-top: 5em;
 }
 
 #sidebar ul {
@@ -236,7 +226,6 @@ hr {
   letter-spacing: -.5px;
   font-size: 1.8em;
   font-weight: 600;
-  color: #FFFFFF;
 }
 
 #sidebar p {

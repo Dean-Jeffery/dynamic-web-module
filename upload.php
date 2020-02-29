@@ -7,15 +7,15 @@ include_once('inc/connection.inc.php');
 if (isset($_POST['submit']))
 {
 	//check to see all fields have been completed
-  $firstName = $_POST['firstName'];
-  $surName = $_POST['surName'];
-  $email = $_POST['email'];
-  $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+  $articleTitle = $_POST['articleTitle'];
+  $articleAuthor = $_POST['articleAuthor'];
+  $articleDate = $_POST['articleDate'];
+  $articleBody = $_POST['articleBody'];
 	// create sql query to add the comment
-	$query = "INSERT INTO tblUsers (userFirstname, userSurname, userEmail, userLevel, userPassword) VALUES ('$firstName','$surName','$email','User','$password')";
+	$query = "INSERT INTO tblArticles (articleTitle, articleAuthor, articleDate, articleBody) VALUES ('$articleTitle','$articleAuthor','$articleDate','$articleBody')";
 	$result = $db->query($query);
 	if ($result)
-		echo ' user inserted into database.';
+		echo 'Blog uploaded';
 	$db->close();
 }
 ?>
@@ -43,19 +43,19 @@ if (isset($_POST['submit']))
 	<div id="page" class="container">
 		<div id="content">
 			<div class="post">
-				<h2 class="title"><a href="#">Words and stuff here</a></h2>
+				<h2 class="title"><a href="#">Upload blog</a></h2>
           <form id="register" name="register" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-					  <div class="label"><label for="firstName">First Name</label></div>
-					  <div class="input"><input type="text" name="firstName"  tabindex="1" /></div>
+					  <div class="label"><label for="articleTitle">Title of blog</label></div>
+					  <div class="input"><input type="text" name="articleTitle"  tabindex="1" /></div>
 					  <br />
-					  <div class="label"><label for="surName">Surname</label></div>
-					  <div class="input"><input type="text" name="surName"  tabindex="2" /></textarea></div>
+					  <div class="label"><label for="articleAuthor">Author of blog</label></div>
+					  <div class="input"><input type="text" name="articleAuthor"  tabindex="2" /></textarea></div>
 					  <br />
-					  <div class="label"><label for="email">Email</label></div>
-					  <div class="input"><input type="text" name="email"  tabindex="3" /></div>
+					  <div class="label"><label for="articleDate">Date of blog</label></div>
+					  <div class="input"><input type="text" name="articleDate"  tabindex="3" /></div>
 					  <br />
-					  <div class="label"><label for="Password">Password</label></div>
-					  <div class="input"><input type="text" name="password"  tabindex="4" /></div>
+					  <div class="label"><label for="articleBody">Main body of blog</label></div>
+					  <div class="input"><input type="text" name="articleBody"  tabindex="4" /></div>
 					  <div class="label">&nbsp;</div>
 					  <div class="input">
 						<input type="reset" name="reset"  value="Reset" tabindex="5" />
